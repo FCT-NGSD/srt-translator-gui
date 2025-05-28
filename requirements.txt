@@ -2,3 +2,4 @@ flet
 flet_desktop
 pyinstaller
 pysrt
+deepl
