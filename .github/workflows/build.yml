@@ -36,8 +36,8 @@ jobs:
         shell: pwsh
 
       - name: Build EXE with PyInstaller
-        run: |
-          pyinstaller --noconfirm --onefile --console --name SRTTranslator --add-data "assets:assets" --hidden-import=flet_desktop main.py
+        run: |  # ★★★ この行のインデントを修正しました ★★★
+          pyinstaller --noconfirm --onefile --console --name SRTTranslator --add-data "assets:assets" --hidden-import=flet_desktop --hidden-import=pysrt main.py
 
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v2
